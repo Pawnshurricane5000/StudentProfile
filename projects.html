@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Hemanth Samayamantri</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-name">Hemanth Samayamantri</a>
+    <div class="nav-right">
+      <div class="nav-links" id="navLinks">
+        <a href="projects.html" class="active">Projects</a>
+        <a href="research.html">Research</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="demos.html">Demos</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">☀️</button>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ========== PAGE HEADER ========== -->
+<div class="page-header">
+  <p class="section-label">Work & Builds</p>
+  <h1>Projects</h1>
+</div>
+
+<!-- ========== PROJECTS ========== -->
+<section>
+  <p class="section-label reveal">Featured Project</p>
+
+  <div class="featured-card reveal">
+    <h3>FTC Robotics — Spare Parts #11848</h3>
+    <p class="role">Programming Lead & Software Architect · 5 Seasons (2021–2026)</p>
+    <p>Lead all robot software development in Java for FTC Team 11848, a community-based team from Lake Villa, Illinois. Designed and tuned PID control systems for drivetrain, arm, and linear slide mechanisms using encoder feedback. Built autonomous routines using Roadrunner odometry localization, sensor fusion, and TensorFlow object detection.</p>
+    <p>Implemented 3-wheel dead-wheel odometry — computing wheel displacement (d = ticks/tpr × 2πr), orientation change (Δθ = (D_R − D_L) / track), forward/strafe movement, and global position updates via sin/cos rotation matrices. Created motor speed limiters, touch sensor encoder resets, LED match timer alerts, and dual-driver gamepad mappings for two-controller operation.</p>
+    <p>Built and CAD'd 4 robots across 5 seasons, including "Voyager" and "Nautilus" for the 2024–25 Into The Deep season — featuring mecanum drivetrain, tilting linear slides, 3D-printed 4-DOF arm, flipping specimen claw, and bucket dumping mechanism. Mentored new programmers in Java and control theory. Led 10,000+ outreach hours impacting 100,000+ people across Maker Faires, library STEAM workshops, FLL mentoring, sponsor visits, and international collaboration with Libyan FTC team Hydra #22947.</p>
+    <div class="stats-row">
+      <div class="stat"><div class="stat-num">5</div><div class="stat-label">Seasons</div></div>
+      <div class="stat"><div class="stat-num">4</div><div class="stat-label">Robots Built</div></div>
+      <div class="stat"><div class="stat-num">50+</div><div class="stat-label">Auto Programs</div></div>
+      <div class="stat"><div class="stat-num">100k+</div><div class="stat-label">People Impacted</div></div>
+      <div class="stat"><div class="stat-num">10k+</div><div class="stat-label">Outreach Hours</div></div>
+    </div>
+    <div class="tags">
+      <span class="tag">Java</span><span class="tag">Android Studio</span><span class="tag">Roadrunner Odometry</span><span class="tag">PID Control</span><span class="tag">Sensor Fusion</span><span class="tag">Mecanum Drive</span><span class="tag">Motor Encoders</span><span class="tag">TensorFlow</span><span class="tag">Computer Vision</span><span class="tag">3D Printing</span><span class="tag">CAD</span>
+    </div>
+    <a href="https://github.com/Pawnshurricane5000" class="card-link" target="_blank" rel="noopener">View Code on GitHub →</a>
+  </div>
+
+  <p class="section-title reveal">More Projects</p>
+  <div class="projects-grid">
+    <div class="project-card reveal">
+      <div class="card-num">01</div>
+      <h3>Computer Vision Classifier</h3>
+      <p class="card-desc">Python/OpenCV algorithm to detect and classify colors and shapes from live video. Applied preprocessing, masking, contour detection, and ML-style classification. Connected physics concepts to robotic perception systems.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">OpenCV</span><span class="tag">Computer Vision</span><span class="tag">ML</span></div>
+    </div>
+    <div class="project-card reveal">
+      <div class="card-num">02</div>
+      <h3>NeighborConnect</h3>
+      <p class="card-desc">Congressional App Challenge submission — community engagement app enabling neighbor-to-neighbor communication, event creation, and local assistance requests. Built for social impact and accessibility.</p>
+      <div class="tags"><span class="tag">JavaScript</span><span class="tag">HTML/CSS</span><span class="tag">Social Impact</span></div>
+    </div>
+    <div class="project-card reveal">
+      <div class="card-num">03</div>
+      <h3>ZNotes — AP Calculus BC</h3>
+      <p class="card-desc">Creating comprehensive AP Calc BC content for ZNotes — free academic resources reaching students in developing countries without access to quality education. Making advanced math globally accessible.</p>
+      <div class="tags"><span class="tag">Education</span><span class="tag">Global Impact</span><span class="tag">Calculus</span></div>
+    </div>
+    <div class="project-card reveal">
+      <div class="card-num">04</div>
+      <h3>MisticusMinds — Backend Dev</h3>
+      <p class="card-desc">Integrated Python with MySQL to build and manage databases. Wrote scripts to store, retrieve, and organize data. Strengthened backend development, debugging, and data architecture skills.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">MySQL</span><span class="tag">Backend</span><span class="tag">Database Design</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Hemanth Samayamantri · Chicago, IL</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

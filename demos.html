@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demos — Hemanth Samayamantri</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-name">Hemanth Samayamantri</a>
+    <div class="nav-right">
+      <div class="nav-links" id="navLinks">
+        <a href="projects.html">Projects</a>
+        <a href="research.html">Research</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="demos.html" class="active">Demos</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">☀️</button>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ========== PAGE HEADER ========== -->
+<div class="page-header">
+  <p class="section-label">Try It Yourself</p>
+  <h1>Interactive Demos</h1>
+</div>
+
+<!-- ========== DEMOS ========== -->
+<section>
+  <div class="demos-grid">
+    <!-- DEMO 1: Odometry Simulator -->
+    <div class="demo-card reveal">
+      <div class="demo-header">
+        <h3>🤖 Odometry Simulator</h3>
+        <p>Move the robot with WASD or arrow keys. Watch the odometry math update in real time — the same equations running on our FTC robots.</p>
+      </div>
+      <div class="demo-body">
+        <div class="demo-canvas-wrap">
+          <canvas id="odoCanvas"></canvas>
+        </div>
+        <div class="demo-readout">
+          <div class="readout-item"><div class="readout-label">X (in)</div><div class="readout-value" id="odo-x">0.00</div></div>
+          <div class="readout-item"><div class="readout-label">Y (in)</div><div class="readout-value" id="odo-y">0.00</div></div>
+          <div class="readout-item"><div class="readout-label">θ (deg)</div><div class="readout-value" id="odo-theta">0.0°</div></div>
+          <div class="readout-item"><div class="readout-label">d_L</div><div class="readout-value" id="odo-dl">0.00</div></div>
+          <div class="readout-item"><div class="readout-label">d_R</div><div class="readout-value" id="odo-dr">0.00</div></div>
+          <div class="readout-item"><div class="readout-label">Δθ</div><div class="readout-value" id="odo-dtheta">0.000</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DEMO 2: Chess Rating Predictor -->
+    <div class="demo-card reveal">
+      <div class="demo-header">
+        <h3>♟️ Chess Rating Predictor</h3>
+        <p>Enter your game stats and the model estimates your rating — based on my research paper analyzing 18,000+ games.</p>
+      </div>
+      <div class="demo-body">
+        <div class="demo-form" id="chessForm">
+          <label>Avg Centipawn Loss
+            <input type="number" id="chess-cpl" value="45" min="0" max="500" step="1">
+          </label>
+          <label>Inaccuracies per Game
+            <input type="number" id="chess-inacc" value="3" min="0" max="50" step="1">
+          </label>
+          <label>Mistakes per Game
+            <input type="number" id="chess-mistakes" value="2" min="0" max="30" step="1">
+          </label>
+          <label>Blunders per Game
+            <input type="number" id="chess-blunders" value="1" min="0" max="20" step="1">
+          </label>
+          <button class="btn btn-primary" onclick="predictRating()">Predict Rating</button>
+        </div>
+        <div class="demo-result" id="chessResult" style="display:none;">
+          <h4>Estimated Rating</h4>
+          <div class="big-num" id="chess-rating-value">—</div>
+          <div class="rating-bar"><div class="rating-fill" id="chess-bar" style="width:0%"></div></div>
+          <p id="chess-tier"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DEMO 3: Gambling Loss Calculator -->
+    <div class="demo-card reveal">
+      <div class="demo-header">
+        <h3>🎰 Gambling Impact Calculator</h3>
+        <p>From my M3 Challenge paper — see how gambling affects your finances over 30 years using the exact elasticities from my model.</p>
+      </div>
+      <div class="demo-body">
+        <div class="demo-form" id="gamblingForm">
+          <label>Annual Salary ($)
+            <input type="number" id="gamb-salary" value="65000" min="20000" max="500000" step="1000">
+          </label>
+          <label>Age Group
+            <select id="gamb-age">
+              <option value="0">Under 25</option>
+              <option value="1" selected>25–34</option>
+              <option value="2">35–49</option>
+              <option value="3">50–64</option>
+              <option value="4">65+</option>
+            </select>
+          </label>
+          <label>Region
+            <select id="gamb-region">
+              <option value="0">Northeast</option>
+              <option value="1">Midwest</option>
+              <option value="2" selected>South</option>
+              <option value="3">West</option>
+            </select>
+          </label>
+          <label>Risk Tolerance: <span id="gamb-risk-label">3 — Moderate</span>
+            <input type="range" id="gamb-risk" min="1" max="5" value="3" oninput="updateRiskLabel()">
+          </label>
+          <button class="btn btn-primary" onclick="calcGambling()">Calculate Impact</button>
+        </div>
+        <div class="demo-result" id="gambResult" style="display:none;">
+          <h4>Results</h4>
+          <p id="gamb-di-text"></p>
+          <p id="gamb-loss-text"></p>
+          <p id="gamb-30yr-text"></p>
+          <div class="chart-wrap"><canvas id="gambChart"></canvas></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Hemanth Samayamantri · Chicago, IL</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

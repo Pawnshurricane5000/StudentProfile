@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research — Hemanth Samayamantri</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-name">Hemanth Samayamantri</a>
+    <div class="nav-right">
+      <div class="nav-links" id="navLinks">
+        <a href="projects.html">Projects</a>
+        <a href="research.html" class="active">Research</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="demos.html">Demos</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">☀️</button>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ========== PAGE HEADER ========== -->
+<div class="page-header">
+  <p class="section-label">Published Work & Math Modeling</p>
+  <h1>Research</h1>
+</div>
+
+<!-- ========== RESEARCH ========== -->
+<section>
+  <div class="research-grid">
+    <div class="featured-card reveal">
+      <h3>Back on Track: Modeling Chicago's Underfunded Pension System</h3>
+      <p class="role">MTFC 2025–26 Finalist · Team #23834 · Top 15 nationally out of 135 semi-finalists</p>
+      <p>Built three mathematical models to analyze whether Chicago's MEABF pension fund ($5.06B assets vs. $19.92B liabilities — a 25.4% funded ratio) can recover to the state-mandated 90% target by 2055.</p>
+      <p><strong>Model 1 — Liability Projection:</strong> Exponential regression on 24 years of Public Plans Database data, adjusted for Illinois Tier 2 benefit transition with a piecewise growth function declining from 3.58% to 2.50% as Tier 2 workers replace retirees.</p>
+      <p><strong>Model 2 — Monte Carlo Asset Simulation:</strong> 10,000 simulations across 5 investment strategies with correlated returns (Cholesky decomposition), stochastic contribution compliance modeled as a function of prior-year market performance, and full cash flow dynamics.</p>
+      <p><strong>Model 3 — Annuity Valuation:</strong> Three-cohort insurance buyout model using 4.5% Moody's Aaa discount rate and 12% insurance markup to estimate $19.12B full buyout cost.</p>
+      <p><strong>Key finding:</strong> Contribution compliance matters 3× more than investment strategy — a 79 percentage-point swing in funded ratio vs. 25pp from portfolio choice. With 100% compliance, every strategy achieves median funded ratio above 90%.</p>
+      <div class="stats-row">
+        <div class="stat"><div class="stat-num">10k</div><div class="stat-label">Simulations</div></div>
+        <div class="stat"><div class="stat-num">$19.9B</div><div class="stat-label">Liabilities Modeled</div></div>
+        <div class="stat"><div class="stat-num">79pp</div><div class="stat-label">Compliance Impact</div></div>
+        <div class="stat"><div class="stat-num">28</div><div class="stat-label">Page Paper</div></div>
+      </div>
+      <div class="tags"><span class="tag">Python</span><span class="tag">Monte Carlo</span><span class="tag">Cholesky Decomposition</span><span class="tag">Exponential Regression</span><span class="tag">Sensitivity Analysis</span><span class="tag">Stress Testing</span><span class="tag">Actuarial Math</span></div>
+      <a href="https://github.com/Pawnshurricane5000/Chicago-PensionCrisis" class="card-link" target="_blank" rel="noopener">View Code on GitHub →</a>
+    </div>
+
+    <div class="featured-card reveal">
+      <h3>The Rise of Online Gambling: What's at Stake?</h3>
+      <p class="role">MathWorks M3 Challenge 2026 · Team #18486</p>
+      <p>Built three interconnected models analyzing the societal impact of online sports betting's expansion since the 2018 Supreme Court ruling (Murphy v. NCAA).</p>
+      <p><strong>Q1 — Disposable Income Model:</strong> Calculated after-tax, after-essentials income using BLS Consumer Expenditure Survey data. Applied power-law income elasticities via log-log regression (R² > 0.87) with regional cost-of-living multipliers for US and UK. Food elasticity = 0.33, housing = 0.16, transport = 0.74.</p>
+      <p><strong>Q2 — Expected Gambling Loss:</strong> Modeled annual losses as function of disposable income × 5-level risk tolerance scale × bet-type-specific house edge. Calibrated to match $15B US industry revenue within 3% margin.</p>
+      <p><strong>Q3 — 30-Year Stochastic Savings Simulation:</strong> 10,000-trajectory Monte Carlo showing high-risk gamblers end with median savings of −$15,000 (74% chance of debt) vs. non-gamblers at $217,000.</p>
+      <p><strong>Key finding:</strong> High-risk gambling costs more than all other entertainment combined; 84% of high-risk gamblers lose &gt;10% of disposable income annually. The problem is concentrated in young men 18–34.</p>
+      <div class="stats-row">
+        <div class="stat"><div class="stat-num">10k</div><div class="stat-label">Trajectories</div></div>
+        <div class="stat"><div class="stat-num">$15B</div><div class="stat-label">Industry Calibrated</div></div>
+        <div class="stat"><div class="stat-num">74%</div><div class="stat-label">High-Risk in Debt</div></div>
+        <div class="stat"><div class="stat-num">20</div><div class="stat-label">Page Paper</div></div>
+      </div>
+      <div class="tags"><span class="tag">Python</span><span class="tag">Monte Carlo</span><span class="tag">Log-Log Regression</span><span class="tag">Elasticity Modeling</span><span class="tag">Stochastic Simulation</span><span class="tag">BLS Data</span></div>
+    </div>
+
+    <div class="featured-card reveal">
+      <h3>Impact of Chess Rating on Performance Metrics</h3>
+      <p class="role">Inspirit AI · Best Social Impact Research Paper 2025</p>
+      <p>Analyzed 18,000+ Lichess games studying the relationship between player rating and centipawn loss across three tiers (800–1500, 1500–2000, 2000–3000). Trained a Random Forest Regressor achieving MAE of 238 rating points. Performed hyperparameter tuning on max_depth, max_leaf_nodes, and max_features — with max_depth producing the most significant improvement.</p>
+      <p><strong>Key finding:</strong> No direct correlation between centipawn loss and online rating — external factors beyond move quality influence online rating, supporting the hypothesis that online ratings don't fully reflect true chess strength.</p>
+      <div class="stats-row">
+        <div class="stat"><div class="stat-num">18k+</div><div class="stat-label">Games Analyzed</div></div>
+        <div class="stat"><div class="stat-num">238</div><div class="stat-label">MAE (Points)</div></div>
+        <div class="stat"><div class="stat-num">3</div><div class="stat-label">Rating Tiers</div></div>
+      </div>
+      <div class="tags"><span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">Random Forest</span><span class="tag">Pandas</span><span class="tag">Matplotlib</span><span class="tag">Kaggle</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Hemanth Samayamantri · Chicago, IL</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
