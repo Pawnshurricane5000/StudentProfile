@@ -1,34 +1,19 @@
-# StudentProfile
+# hemanthsamayamantri.com
 
-A simple student profile management project.
+Personal portfolio website showcasing my projects, research papers, achievements, and interactive demos.
 
-## Overview
+## Pages
 
-This repository is currently a Git repository initialized with no working tree files yet. Add your source code and configuration files in this directory (or subdirectories) to start.
+- **Home** — bio, links, and overview
+- **Projects** — FTC robotics (5 seasons, 4 robots, 50+ auto programs), NeighborConnect, ZNotes, and more
+- **Achievements** — chess (USCF 2002, 2× IHSA State Champion), FTC awards, MTFC Finalist, TEAMS Nationals
+- **Demos** — interactive odometry simulator, chess rating predictor, gambling impact calculator
+- **Contact** — email, GitHub, phone
 
-## Suggested Structure
+## Built With
 
-- `src/` - application source code
-- `tests/` - unit/integration tests
-- `docs/` - documentation
+HTML · CSS · JavaScript · Chart.js
 
-## Getting Started
+## Author
 
-1. Clone repository:
-   ```bash
-   git clone <repo-url>
-   cd StudentProfile
-   ```
-2. Add project sources and configuration (language-specific). 
-3. Create and run tests as desired.
-
-## Contribution
-
-1. Fork the repo
-2. Create a feature branch
-3. Add tests
-4. Submit a pull request
-
-## Notes
-
-- Replace this README with actual project details once files are in place.
+**Hemanth Samayamantri** · [@Pawnshurricane5000](https://github.com/Pawnshurricane5000) · samayh09@gmail.com
